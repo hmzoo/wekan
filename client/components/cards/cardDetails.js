@@ -149,6 +149,9 @@ Template.cardDetailsActionsPopup.events({
   'click .js-start-date': Popup.open('editCardStartDate'),
   'click .js-due-date': Popup.open('editCardDueDate'),
   'click .js-move-card': Popup.open('moveCard'),
+  'click .js-clone-card': Cloner.cloneCard(Session.get('currentCard'))
+  ,
+
   'click .js-move-card-to-top'(evt) {
     evt.preventDefault();
     const minOrder = _.min(this.list().cards().map((c) => c.sort));

@@ -115,6 +115,7 @@ template(name="cardDetailsActionsPopup")
   hr
   ul.pop-over-list
     li: a.js-move-card {{_ 'moveCardPopup-title'}}
+    li: a.js-clone-card Clone
     unless archived
       li: a.js-archive {{_ 'archive-card'}}
     li: a.js-more {{_ 'cardMorePopup-title'}}
